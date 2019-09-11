@@ -7,14 +7,15 @@
 ```
 repositories {
     //https://maven.aliyun.com/mvn/view
-    maven { url = uri("https://maven.aliyun.com/repository/jcenter") }
+    jcenter { url = uri("https://maven.aliyun.com/repository/jcenter") }
+    google()
 }
 
 dependencies {
     implementation("com.fpliu:kotlin-ext-android:1.0.0")
 }
 ```
-其他方式请看[jcenter](https://bintray.com/fpliu/newton/kotlin-ext-android)
+其他方式请看[bintray](https://bintray.com/fpliu/newton/kotlin-ext-android)
 
 ## 文档
 ##### fun Application.globalReplaceFont(fontFileRelativeToAssetsDir: String)
