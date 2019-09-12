@@ -1,21 +1,10 @@
-val kotlinVersion: String = rootProject.extra["kotlinVersion"] as String
-
-buildscript {
-    repositories {
-        jcenter { url = uri("https://maven.aliyun.com/repository/jcenter") }
-    }
-    dependencies {
-        classpath("com.fpliu:BintrayUploadGradlePlugin:1.0.7")
-    }
-}
-
-apply {
-    plugin("com.fpliu.bintray")
-}
-
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    
+    //https://github.com/leleliu008/BintrayUploadGradlePlugin
+    //https://plugins.gradle.org/plugin/com.fpliu.bintray
+    id("com.fpliu.bintray").version("1.0.7")
 
     //用于构建jar和pom
     //https://github.com/dcendents/android-maven-gradle-plugin
@@ -61,7 +50,7 @@ android {
 }
 
 dependencies {
-    api(kotlin("stdlib", kotlinVersion))
+    api(kotlin("stdlib", rootProject.extra["kotlinVersion"] as String))
 
     //https://dl.google.com/dl/android/maven2/index.html
     //https://developer.android.google.cn/reference/androidx/classes
