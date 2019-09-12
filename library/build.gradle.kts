@@ -68,7 +68,7 @@ version = android.defaultConfig.versionName ?: "1.0.0"
 
 val rootProjectName = rootProject.name
 
-(project.extensions.getByName("bintrayUploadExtension") as com.fpliu.gradle.BintrayUploadExtension).apply {
+bintrayUploadExtension {
     developerName = "leleliu008"
     developerEmail = "leleliu008@gamil.com"
 
