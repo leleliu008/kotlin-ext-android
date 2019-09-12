@@ -33,7 +33,7 @@ android {
         minSdkVersion(19)
         targetSdkVersion(28)
         versionCode = 1
-        versionName = "1.0.0"
+        versionName = "1.0.1"
     }
 
     sourceSets {
@@ -68,7 +68,7 @@ dependencies {
     api("androidx.appcompat:appcompat:1.1.0")
 
     //https://github.com/leleliu008/kotlin-ext-jdk
-    api("com.fpliu:kotlin-ext-jdk:1.0.0")
+    api("com.fpliu:kotlin-ext-jdk:1.0.1")
 }
 
 // 这里是groupId，必须填写,一般填你唯一的包名

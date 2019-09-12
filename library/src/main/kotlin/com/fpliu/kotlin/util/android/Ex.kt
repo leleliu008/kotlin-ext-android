@@ -34,8 +34,12 @@ import androidx.annotation.*
 import androidx.annotation.IntRange
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.fpliu.kotlin.util.jdk.exec
 import com.fpliu.kotlin.util.jdk.getUnicodeCharacterCount
+import java.io.BufferedReader
 import java.io.File
+import java.io.IOException
+import java.io.InputStreamReader
 import kotlin.reflect.KClass
 
 var appContext =
@@ -348,9 +352,24 @@ class UnicodeCharacterCountFilter(val max: Int) : InputFilter {
 //    <item name="android:typeface">monospace</item>
 //</style>
 @Throws(Exception::class)
-fun globalReplaceFont(appContext: Context, fontFileRelativeToAssetsDir: String) {
+fun Application.globalReplaceFont(fontFileRelativeToAssetsDir: String) {
     Typeface::class.java.getDeclaredField("MONOSPACE").run {
         isAccessible = true
-        set(null, Typeface.createFromAsset(appContext.assets, fontFileRelativeToAssetsDir))
+        set(null, Typeface.createFromAsset(assets, fontFileRelativeToAssetsDir))
     }
+}
+
+//获取状态栏高度
+fun getStatusBarHeight(): Int {
+    val resources = appContext.resources
+    val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
+    if (resourceId > 0) {
+        return resources.getDimensionPixelSize(resourceId)
+    }
+    return 0
+}
+
+//读取/default.prop文件中的内容，必须借助命令行工具
+fun getprop(name: String): String? {
+    return exec("getprop $name")
 }
