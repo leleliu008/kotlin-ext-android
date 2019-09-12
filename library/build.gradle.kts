@@ -19,10 +19,10 @@ android {
     compileSdkVersion(28)
 
     defaultConfig {
-        minSdkVersion(19)
+        minSdkVersion(18)
         targetSdkVersion(28)
         versionCode = 1
-        versionName = "1.0.1"
+        versionName = "1.0.3"
     }
 
     sourceSets {

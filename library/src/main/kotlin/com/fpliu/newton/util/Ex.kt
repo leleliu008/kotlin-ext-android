@@ -1,4 +1,4 @@
-package com.fpliu.kotlin.util.android
+package com.fpliu.newton.util
 
 import android.annotation.SuppressLint
 import android.app.Activity
