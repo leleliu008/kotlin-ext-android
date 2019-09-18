@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">kotlin-ext-android测试工程</string>
+    <string name="app_description">kotlin-ext-android测试工程</string>
+    <string name="tv">This is a test project</string>
+</resources>

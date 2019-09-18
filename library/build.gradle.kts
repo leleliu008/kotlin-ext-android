@@ -4,7 +4,7 @@ plugins {
     
     //https://github.com/leleliu008/BintrayUploadGradlePlugin
     //https://plugins.gradle.org/plugin/com.fpliu.bintray
-    id("com.fpliu.bintray").version("1.0.7")
+    id("com.fpliu.bintray").version("1.0.8")
 
     //用于构建jar和pom
     //https://github.com/dcendents/android-maven-gradle-plugin
@@ -22,7 +22,7 @@ android {
         minSdkVersion(18)
         targetSdkVersion(28)
         versionCode = 1
-        versionName = "1.0.3"
+        versionName = "1.0.4"
     }
 
     sourceSets {
@@ -69,6 +69,8 @@ version = android.defaultConfig.versionName ?: "1.0.0"
 val rootProjectName = rootProject.name
 
 bintrayUploadExtension {
+    archivesBaseName = rootProjectName
+
     developerName = "leleliu008"
     developerEmail = "leleliu008@gamil.com"
 

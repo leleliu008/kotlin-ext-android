@@ -14,7 +14,6 @@ import android.content.res.ColorStateList
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.Paint
-import android.graphics.Typeface
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.RoundRectShape
 import android.net.ConnectivityManager
@@ -349,19 +348,6 @@ class UnicodeCharacterCountFilter(val max: Int) : InputFilter {
         } else {
             null // keep original
         }
-    }
-}
-
-//全局替换字体，必须明确声明你使用的字体是monospace
-//<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-//    ....
-//    <item name="android:typeface">monospace</item>
-//</style>
-@Throws(Exception::class)
-fun Application.globalReplaceFont(fontFileRelativeToAssetsDir: String) {
-    Typeface::class.java.getDeclaredField("MONOSPACE").run {
-        isAccessible = true
-        set(null, Typeface.createFromAsset(assets, fontFileRelativeToAssetsDir))
     }
 }
 
