@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.fpliu:kotlin-ext-android:1.0.0")
+    implementation("com.fpliu:kotlin-ext-android:1.0.4")
 }
 ```
 其他方式请看[bintray](https://bintray.com/fpliu/newton/kotlin-ext-android)
