@@ -52,11 +52,11 @@ dependencies {
 
     api("com.fpliu:Android-BaseUI:2.0.12")
     api("com.fpliu:Android-CustomDimen:1.0.0")
-    api("com.fpliu:Android-StatusBar-Util:1.0.1")
+    api("com.fpliu:Android-StatusBar-Util:1.0.2")
     api("com.fpliu:Android-Font-Config-api:1.0.0")
     api("com.fpliu:Android-Font-Assets-Alibaba_PuHuiTi_Light:1.0.0")
 
-    testApi("junit:junit:4.12")
+    testImplementation("junit:junit:4.12")
     //https://developer.android.google.cn/training/testing/espresso/setup
     androidTestImplementation("androidx.test.espresso:espresso-core:3.2.0")
     androidTestImplementation("androidx.test:runner:1.2.0")

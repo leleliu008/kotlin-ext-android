@@ -9,11 +9,11 @@ buildscript {
     dependencies {
         //用于构建Android工程的插件
         //https://developer.android.com/studio/releases/gradle-plugin
-        classpath("com.android.tools.build:gradle:3.3.2")
+        classpath("com.android.tools.build:gradle:3.5.0")
 
         //Kotlin编译的插件
         //http://kotlinlang.org/docs/reference/using-gradle.html
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+        classpath(kotlin("gradle-plugin", kotlinVersion))
     }
 }
 
